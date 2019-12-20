@@ -1,0 +1,30 @@
+import java.util.*;
+
+public class study1 {
+	ArrayList<Integer> num;
+	public static void main(String[] args) {
+		study1 a = new study1();
+		a.num = new ArrayList<>(Arrays.asList(1,2,3,4,5,6));
+		a.Delete_e_n(a.num);
+		a.Display(a.num);
+	}
+	
+	private void Delete_e_n(ArrayList<Integer> num) {
+		Iterator<Integer> iter = num.iterator();
+		while(iter.hasNext()){
+			Integer c = iter.next();
+			if(c % 2 == 0)
+			{
+				iter.remove();
+			}
+		}
+	}
+	
+	private void Display(ArrayList<Integer> num) {
+		Iterator<Integer> iter = num.iterator();
+		for(Integer c : num)
+		{
+			System.out.println(c);
+		}
+	}
+}
