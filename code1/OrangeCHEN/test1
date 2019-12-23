@@ -1,0 +1,12 @@
+import numpy as np
+a = input()
+a = a.replace(' ', '')
+a = list(a.split(','))
+while '' in a:
+    a.remove('')
+a = [int(i) for i in a]
+b = []
+for i in a:
+    if i % 2:
+        b.append(i)
+print(b)
